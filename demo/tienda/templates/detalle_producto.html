@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+<h3> Detalles del Producto</h3>
+
+{{producto}}
+
+<img src="{{producto.url}}.jpeg">
+
+{{producto.precio}}$
+
+<a href="{%url 'filtro_rubro' producto.rubro.id %}"  > Ver más elementos del mismo rubro </a>
+
+{% endblock %}

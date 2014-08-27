@@ -1,0 +1,50 @@
+
+
+{% extends "base.html"%}
+
+{% block content %}
+<table border=1>
+<tr> 
+<td> <strong> Nombre del Producto </strong> </td> 
+<td> <strong>   Precio </strong> </td> 
+<td> <strong>   Rubro </strong> </td> 
+</tr>
+
+{% for producto in productos%}
+<tr>
+
+    <td>
+        <a href="{%url 'detalle' producto.id %}"> {{producto}} </a> 
+    </td>
+
+    <td>
+        {{producto.precio}} $
+    </td>
+
+
+    <td>
+        {{producto.rubro}}
+    </td>
+
+
+    <td>
+        {% if producto.disponible %}
+            Hay
+        {% else%}
+            No Hay
+        {% endif %}
+    </td>
+
+</tr>
+    
+{% empty %}
+No hay Productos
+{% endfor%}
+<table>
+{% endblock %}
+
+
+    <!---
+    <li>   <a href="detalle_producto/{{producto.id}}"> {{producto}} </a> </li>
+    --->
+

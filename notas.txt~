@@ -1,0 +1,3 @@
+#Creamos un projecto llamado demo
+django-admin.py startproject demo
+

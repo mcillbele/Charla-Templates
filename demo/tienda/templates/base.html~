@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="/media/css/style.css">
+    {% block linkcss %}
+    {% endblock %}
+    <title> {% block title %}   {% endblock %} </title>
+    
+    {% block scripts %}
+    {% endblock %}
+
+    <style type="text/css">
+    {% block css %}
+    {% endblock %}
+    </style>
+
+</head>
+
+<body {% block etiquetaBody %} {% endblock %}>
+
+    <div align=center id="header">
+        <ul class="nav">
+            <li><a href="{% url 'home'%}"> <img src="/media/images/logo.png" style="float:left;" width=85px>    </a></li>
+            <li><a href=""> Contacto </a></li>
+            <li><a href=""> Instrucciones </a></li>
+            <li><a href=""> Cerrar Sesion </a></li>
+            <li><a href=""> Registro </a></li>
+        </ul>
+    </div>
+
+    <br>    
+    <div align=center>
+    {% block content %}
+
+
+    {% endblock %}
+    </div>
+
+<div align=center>
+            <img src="/media/images/banner.gif" width=598px />
+</div>
+
+</body>
+</html>

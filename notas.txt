@@ -1,0 +1,6 @@
+#Creamos un projecto llamado demo
+django-admin.py startproject demo
+
+#Creamos un projecto llamado tienda dentro de demo
+django-admin.py startapp tienda
+
